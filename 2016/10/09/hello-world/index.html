@@ -15,6 +15,8 @@
   <script src="http://static.duoshuo.com/embed.js"></script>
   
   
+  <link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="atom.xml">
+  
   
 
   
@@ -41,6 +43,10 @@
                             </form>
                             <ul>
                                 <div class="mp-scroll">
+                                
+                                <li class="search-archive-li mp-pjax">
+                                    <a href="/blog/2016/10/09/wtf/">wtf</a>
+                                </li>
                                 
                                 <li class="search-archive-li mp-pjax">
                                     <a href="/blog/2016/10/09/hello-world/">Hello World</a>
@@ -81,6 +87,11 @@
                             <ul>
                                 <div class="mp-scroll">
                                 
+                                <li class="search-tag-li mp-pjax">
+                                    <a href="/blog/tags/make-the-change/">&nbsp;&nbsp;&nbsp;make the change</a>
+                                    <small>1</small>
+                                </li>
+                                
                                 </div>
                             </ul>
                         </div>
@@ -96,9 +107,13 @@
         <div id="pjax">
             <div class="pjax-hidden" style="display: none">
                 
+                    <a  data-pjax href="/blog/2016/10/09/wtf/">wtf</a>
+                
                     <a  data-pjax href="/blog/2016/10/09/hello-world/">Hello World</a>
                 
                 
+                
+                    <a data-pjax href="/blog/tags/make-the-change/">&nbsp;&nbsp;make the change</a>
                 
                 <a data-pjax class="fa fa-user" href="/blog/about">&nbsp;&nbsp;&nbsp;About me</a>
             </div>
@@ -163,7 +178,7 @@
         <hr/>
         <nav class="pagination" style="width:auto" role="pagination">
             
-            <a style="cursor:default" class="newer-posts" href="#">This is the First Post</a>
+            <a data-pjax class="newer-posts" href="/blog/2016/10/09/wtf/">← Prev Post</a>
             
             <a class="share-button" data-original-title title>Share this Post</a>
             
@@ -181,6 +196,8 @@
 
   
 <footer class="site-footer">
+    
+    <a class="subscribe icon-feed" href="atom.xml"><span class="tooltip">Subscribe!</span></a>
     
     <div class="inner">
         <section class="copyright"><a href="/blog/"></a> &copy; 晨星_风的博客 2014</section>
