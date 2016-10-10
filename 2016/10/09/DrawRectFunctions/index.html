@@ -4,14 +4,18 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>晨星_风的博客</title>
+  <title>CoreGraphics绘制各种图形的方法：写文字、划线、椭圆、矩形、菱形等 | 晨星_风的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="晨星_风的博客">
-<meta property="og:url" content="https://fizix100.github.io/index.html">
+  <meta name="description" content="NO.1画一条线12345CGContextRef context = UIGraphicsGetCurrentContext();CGContextSetRGBStrokeColor(context, 0.5, 0.5, 0.5, 0.5);//线条颜色CGContextMoveToPoint(context, 20, 20);CGContextAddLineToPoint(context, 2">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CoreGraphics绘制各种图形的方法：写文字、划线、椭圆、矩形、菱形等">
+<meta property="og:url" content="https://fizix100.github.io/2016/10/09/DrawRectFunctions/index.html">
 <meta property="og:site_name" content="晨星_风的博客">
+<meta property="og:description" content="NO.1画一条线12345CGContextRef context = UIGraphicsGetCurrentContext();CGContextSetRGBStrokeColor(context, 0.5, 0.5, 0.5, 0.5);//线条颜色CGContextMoveToPoint(context, 20, 20);CGContextAddLineToPoint(context, 2">
+<meta property="og:updated_time" content="2016-10-10T08:43:17.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="晨星_风的博客">
+<meta name="twitter:title" content="CoreGraphics绘制各种图形的方法：写文字、划线、椭圆、矩形、菱形等">
+<meta name="twitter:description" content="NO.1画一条线12345CGContextRef context = UIGraphicsGetCurrentContext();CGContextSetRGBStrokeColor(context, 0.5, 0.5, 0.5, 0.5);//线条颜色CGContextMoveToPoint(context, 20, 20);CGContextAddLineToPoint(context, 2">
   
   
   <script src="/blog/style.js"></script>
@@ -112,17 +116,15 @@
 </nav>
 
       <div class="body-wrap">
-        
-  
-    <article id="post-DrawRectFunctions" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-DrawRectFunctions" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/blog/2016/10/09/DrawRectFunctions/">CoreGraphics绘制各种图形的方法：写文字、划线、椭圆、矩形、菱形等</a>
+    <h1 class="article-title" itemprop="name">
+      CoreGraphics绘制各种图形的方法：写文字、划线、椭圆、矩形、菱形等
     </h1>
   
 
@@ -164,17 +166,31 @@
   </div>
 </article>
 
-
-
-
-
-
-
-
-
-
   
-  
+
+
+
+
+
+
+
+
+
+<section id="comments">
+  <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'jslite'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</section>
 
 
       </div>
@@ -196,8 +212,8 @@
 		fancybox: false,
 		mathjax: false,
 		animate: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
