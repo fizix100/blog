@@ -4,9 +4,9 @@
   
   <link href="/blog/atom.xml" rel="self"/>
   
-  <link href="https://fizix100.github.io/"/>
+  <link href="http://yoursite.com/blog/"/>
   <updated>2016-10-10T10:05:35.000Z</updated>
-  <id>https://fizix100.github.io/</id>
+  <id>http://yoursite.com/blog/</id>
   
   <author>
     <name>晨星、风</name>
@@ -17,8 +17,8 @@
   
   <entry>
     <title>UITableView常用方法简介</title>
-    <link href="https://fizix100.github.io/2016/10/10/UITableViewIntro/"/>
-    <id>https://fizix100.github.io/2016/10/10/UITableViewIntro/</id>
+    <link href="http://yoursite.com/blog/2016/10/10/UITableViewIntro/"/>
+    <id>http://yoursite.com/blog/2016/10/10/UITableViewIntro/</id>
     <published>2016-10-10T09:21:32.000Z</published>
     <updated>2016-10-10T10:05:35.000Z</updated>
     
@@ -50,8 +50,8 @@
   
   <entry>
     <title>CoreGraphics绘制各种图形的方法：写文字、划线、椭圆、矩形、菱形等</title>
-    <link href="https://fizix100.github.io/2016/10/09/DrawRectFunctions/"/>
-    <id>https://fizix100.github.io/2016/10/09/DrawRectFunctions/</id>
+    <link href="http://yoursite.com/blog/2016/10/09/DrawRectFunctions/"/>
+    <id>http://yoursite.com/blog/2016/10/09/DrawRectFunctions/</id>
     <published>2016-10-09T05:54:01.000Z</published>
     <updated>2016-10-10T08:43:17.000Z</updated>
     
