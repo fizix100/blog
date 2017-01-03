@@ -5,7 +5,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/blog/"/>
-  <updated>2016-12-29T09:47:50.000Z</updated>
+  <updated>2017-01-03T02:06:50.000Z</updated>
   <id>http://yoursite.com/blog/</id>
   
   <author>
@@ -17,12 +17,12 @@
   
   <entry>
     <title></title>
-    <link href="http://yoursite.com/blog/2016/12/29/UITextField%E7%9A%84%E9%93%B6%E8%A1%8C%E5%8D%A1%E6%A0%BC%E5%BC%8F%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/"/>
-    <id>http://yoursite.com/blog/2016/12/29/UITextField的银行卡格式踩坑记录/</id>
+    <link href="http://yoursite.com/blog/2016/12/29/UITextField%E5%AE%9E%E7%8E%B0%E9%93%B6%E8%A1%8C%E5%8D%A1%E5%8F%B7%E6%A0%BC%E5%BC%8F%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/"/>
+    <id>http://yoursite.com/blog/2016/12/29/UITextField实现银行卡号格式踩坑记录/</id>
     <published>2016-12-29T09:47:26.000Z</published>
-    <updated>2016-12-29T09:47:50.000Z</updated>
+    <updated>2017-01-03T02:06:50.000Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="UITextField的银行卡格式踩坑记录"><a href="#UITextField的银行卡格式踩坑记录" class="headerlink" title="UITextField的银行卡格式踩坑记录"></a><strong>UITextField的银行卡格式踩坑记录</strong></h2><p>上次接到一个“很小的需求”是UITextField输入的数字编号要每隔4位插入一个空格，乍一看好像很简单，只需要在textField的delegate方法(shouldChangeCharactersInRange)里面加一些简单的判断并插入空格即可，然而事实并不是这样，这个小小的需求隐藏了各种小坑；</p>
+    <content type="html"><![CDATA[<h2 id="UITextField实现银行卡号格式踩坑记录"><a href="#UITextField实现银行卡号格式踩坑记录" class="headerlink" title="UITextField实现银行卡号格式踩坑记录"></a><strong>UITextField实现银行卡号格式踩坑记录</strong></h2><p>上次接到一个“很小的需求”是UITextField输入的数字编号要每隔4位插入一个空格，乍一看好像很简单，只需要在textField的delegate方法(shouldChangeCharactersInRange)里面加一些简单的判断并插入空格即可，然而事实并不是这样，这个小小的需求隐藏了各种小坑；</p>
 <h3 id="最简单的实现"><a href="#最简单的实现" class="headerlink" title="最简单的实现"></a>最简单的实现</h3><p>这个需求最直观的实现方式就是，在代理方法中加判断插入空格，代码如下：</p>
 <figure class="highlight objectivec"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">- (<span class="built_in">BOOL</span>)textField:(<span class="built_in">UITextField</span> *)textField shouldChangeCharactersInRange:(<span class="built_in">NSRange</span>)range replacementString:(<span class="built_in">NSString</span> *)string</div><div class="line">&#123;</div><div class="line">    <span class="keyword">if</span> ((textField.text.length+<span class="number">1</span>) % <span class="number">5</span> == <span class="number">0</span> &amp;&amp; textField.text.length &gt; <span class="number">0</span> &amp;&amp; string.length &gt; <span class="number">0</span>) &#123;</div><div class="line">        textField.text = [textField.text stringByAppendingString:<span class="string">@" "</span>];</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>经过各种简化提炼，将各种逻辑简化为1个if判断语句和一行插入空格的代码：条件有3个：①字符串的长度(不含空格)可以被4整除；②字符串的长度大于0；③本次编辑是输入动作。以上代码可以满足最基本的需求，字符的输出格式一般不会出错😎。然而残酷的现实告诉你这个需求真的没这么简单！！！</p>
@@ -57,7 +57,7 @@
     
     <summary type="html">
     
-      &lt;h2 id=&quot;UITextField的银行卡格式踩坑记录&quot;&gt;&lt;a href=&quot;#UITextField的银行卡格式踩坑记录&quot; class=&quot;headerlink&quot; title=&quot;UITextField的银行卡格式踩坑记录&quot;&gt;&lt;/a&gt;&lt;strong&gt;UITextField的银行卡
+      &lt;h2 id=&quot;UITextField实现银行卡号格式踩坑记录&quot;&gt;&lt;a href=&quot;#UITextField实现银行卡号格式踩坑记录&quot; class=&quot;headerlink&quot; title=&quot;UITextField实现银行卡号格式踩坑记录&quot;&gt;&lt;/a&gt;&lt;strong&gt;UITextFie
     
     </summary>
     
